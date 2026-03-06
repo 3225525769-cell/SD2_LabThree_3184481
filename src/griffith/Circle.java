@@ -7,8 +7,25 @@ public class Circle  extends Shape{
         this.radius = radius;
 
     }
-    public double getArea(){
+    public double getRadius(){
+        return radius;
 
+    }
+    public double setRadius(){
+        this.radius=radius;
+
+    }
+    @Override
+    public double area(){
+        return Math.PI*radius*radius;
+    }
+    @Override
+    public double perimeter(){
+        return 2*Math.PI*radius;
+    }
+    @Override
+    public String toString(){
+        return super.toString()+",Radius:"+ radius;
     }
 
 
