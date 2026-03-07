@@ -2,7 +2,7 @@ package griffith;
 
 import static org.junit.jupiter.api.Assertions.*;
 
- public class ShapesTest {
+ public class shapesTest {
     private static final double EPSILON = 0.1;
 
     @org.junit.jupiter.api.Test
@@ -17,14 +17,19 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @org.junit.jupiter.api.Test
-    void testRhombus() {
-        Rhombus rhombus = new Rhombus("Rhombus",5.0,60.0);
-        assertEquals(21.6506,rhombus.area(),EPSILON);
-        assertEquals(20.0,rhombus.perimeter(),EPSILON);
-        assertTrue(rhombus.toString().contains("Side:5.0")&&rhombus.toString().contains("Angle:60.0"));
-
-
+    public void testRhombus() {
+        Rhombus rhombus = new Rhombus("Rhombus", 5.0,6.0, 8.0);
+        double expected1 =(6.0*8.0)/2;
+        assertEquals(expected1,rhombus.area(),EPSILON);
+        double expected2 = 4*5.0;
+        assertEquals(expected2,rhombus.perimeter(),EPSILON);
+        String result =rhombus.toString();
+        assertTrue(result.contains("side:5.0"));
+        assertTrue(result.contains("diagonal1:6.0"));
+        assertTrue(result.contains("diagonal2:8.0"));
+        assertTrue(result.contains("Rhombus"));
     }
+
 
     @org.junit.jupiter.api.Test
     void testRightAngleTriangle() {

@@ -2,12 +2,13 @@ package griffith;
 
 public class Rhombus extends Shape {
     private double side;
-    private double angle;
-
-    public Rhombus(String name, double side,double angle){
+    private double diagonal1;
+    private double diagonal2;
+    public Rhombus(String name, double side,double diagonal1,double diagonal2){
         super(name);
         this.side = side;
-        this.angle = angle;
+        this.diagonal1 = diagonal1;
+        this.diagonal2= diagonal2;
 
     }
     public double getSide(){
@@ -16,18 +17,22 @@ public class Rhombus extends Shape {
     public void setSide(double side){
         this.side=side;
     }
-    public double getAngle(){
-        return angle;
+    public double getDiagonal1(){
+        return diagonal1;
     }
-    public void setAngle(double angle){
-        this.angle =angle;}
-        @Override
-        public double area(){
-            return side*side*Math.sin(Math.toRadians(angle));
+    public void setDiagonal1(double diagonal1){
+        this.diagonal1 =diagonal1;}
+    public double getDiagonal2() {
+        return diagonal2;
+    }
+
+        public void setDiagonal2(double diagonal2){
+            this.diagonal2 = diagonal2;
         }
-        @Override
-    public double perimeter(){
-         return 4*side;
 
     }
+    @Override
+
+
+
 }
