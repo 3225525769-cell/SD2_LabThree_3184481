@@ -21,12 +21,12 @@ import static org.junit.jupiter.api.Assertions.*;
         Rhombus rhombus = new Rhombus("Rhombus",4.0,Math.PI/2);
         assertEquals(16.0,rhombus.area(),EPSILON);
         assertEquals(16.0,rhombus.perimeter(),EPSILON);
-        assertEquals("Shape:rhombus,Side:4.0,Angle"+Math.PI/2,rhombus.toString());
+        assertEquals("Shape:Rhombus,Side:4.0,Angle:"+Math.PI/2,rhombus.toString());
 
 
 
     }
-6
+
 
     @org.junit.jupiter.api.Test
     void testRightAngleTriangle() {
