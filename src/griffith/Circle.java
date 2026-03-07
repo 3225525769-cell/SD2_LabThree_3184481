@@ -11,8 +11,9 @@ public class Circle  extends Shape{
         return radius;
 
     }
-    public double setRadius(){
+    public void setRadius(double radius){
         this.radius=radius;
+
 
     }
     @Override
