@@ -30,5 +30,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
     @org.junit.jupiter.api.Test
     void testRightAngleTriangle() {
+        RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("RightAngledTriangle",3.0,4.0);
+        assertEquals(6.0,rightAngledTriangle.area(),EPSILON);
+        assertEquals(12.0,rightAngledTriangle.perimeter(),EPSILON);
+        assertEquals("Shape：Triangle,Base:3.0,Height:4.0",rightAngledTriangle.toString());
     }
 }
